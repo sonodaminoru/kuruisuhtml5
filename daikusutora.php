@@ -41,12 +41,9 @@ function dijkstra($nodeinfo,$start,$end){
 			break;
 		}
 	}
-	
-	//print_r($route);
-	print_r($cost[$end]);
-
 	$route[$end][] = $end;
-
+	
+	print_r($cost[$end]);
 	print_r($route[$end]);
 	//return $route[$end];
 }
