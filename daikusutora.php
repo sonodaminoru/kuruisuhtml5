@@ -31,7 +31,7 @@ function dijkstra($nodeinfo,$start,$end){
 		foreach($nodeinfo[$start] as $next => $edgecost){
 			if($cost[$next] > $edgecost + $cost[$start]){
 				$cost[$next] = $edgecost + $cost[$start];
-				$route = route_reset($route,$start,$next);
+				$route[$next] = $route[$start];
 				$route[$next][] = $start;
 			}
 		}
@@ -68,12 +68,6 @@ function  next_start($used,$cost){
 		}
 	}
 	return $prov;		
-}
-
-function route_reset($route,$start,$next){
-	$route[$next] = array();
-	$route[$next] = $route[$start];
-	return $route;
 }
 
 dijkstra($nodeinfo,$start,$end);
