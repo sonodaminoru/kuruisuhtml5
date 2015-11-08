@@ -13,7 +13,6 @@ for($i=0;$i<count($rows);$i++){
 	$nodeinfo[$rows[$i][0]] = $nodeinfo[$rows[$i][0]] + array_slice($rows[$i], 1, 1, true);
 }
 
-$n = 6; //データベーステーブルNodeの行数より取得
 $start = 1; //今後,入力された緯度経度値より求めるとこまでできたらいい
 $end = 6;
 
