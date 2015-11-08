@@ -43,7 +43,7 @@ function dijkstra($nodeinfo,$start,$end){
 	}
 	
 	//print_r($route);
-	print_r($cost);
+	print_r($cost[$end]);
 
 	$route[$end][] = $end;
 
